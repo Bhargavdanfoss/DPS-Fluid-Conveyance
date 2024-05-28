@@ -1,6 +1,7 @@
 function sendEmail(From,To,Name,Email,Contact,SubmissionType,BodyofMessage)
 {
     console.log("sendEmail Entry");
+    /*
     var subject = "";
     if(SubmissionType.toLowerCase()=="feedback")
         subject="Feedback received";
@@ -33,5 +34,6 @@ function sendEmail(From,To,Name,Email,Contact,SubmissionType,BodyofMessage)
            
         }
     });
+    */
     console.log("sendEmail Exit");
 }

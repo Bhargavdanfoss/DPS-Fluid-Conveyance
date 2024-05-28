@@ -1,7 +1,7 @@
-/*function sendCount(PageCount,PageName)
+function sendCount(PageCount,PageName)
 {
     console.log("sendCount Entry");   
-
+/*
     var jsonData = JSON.stringify({
         "pagecount":PageCount,        
         "pagename":PageName
@@ -18,6 +18,6 @@
            
         }
     });   
-     
+*/
     console.log("sendCount Exit");
-}*/
+}

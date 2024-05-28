@@ -1,17 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' https://prod-87.westeurope.logic.azure.com/workflows/d0b8d7b3702c41e0a2f24e4f9cd18fb4/triggers/manual/paths/invoke/Send?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=2Q0klkNsUInggoO1Il8UFfBVJJ1RcESRKf91fcHaRyo https://prod-06.westeurope.logic.azure.com/workflows/baaed420a437449c95f5616dca04a775/triggers/manual/paths/invoke/Send?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=qN1nw71VIApYkJIKLl8xLT4yCF0j3AtnwqRd9g474V0; img-src 'self' data:; script-src 'self' 'nonce-dAnf0ss'; style-src 'self' 'unsafe-inline';">
     <title>Home</title>
     <link rel="icon" type="image/png" href="Assets/FCPlus_Logo.png"/>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="bootstrap_min.css">
-  <link rel="stylesheet" href="fontawesome_min.css"> <!--For Search icon-->
-  <script src="jquery_min.js"></script>
-  <script src="bootstrap_min.js"></script>
-  <link rel="stylesheet" href="indexStyle.css">
-  <script src="Scripts/CountHandler.js"></script>
- <link rel="stylesheet" href="fontawesome_6_4_2_min.css"> <!--For Robot icon-->
+  <link nonce="dAnf0ss" rel="stylesheet" href="bootstrap_min.css">
+  <link nonce="dAnf0ss" rel="stylesheet" href="fontawesome_min.css"> <!--For Search icon-->
+  <script nonce="dAnf0ss" src="jquery_min.js"></script>
+  <script nonce="dAnf0ss" src="bootstrap_min.js"></script>
+  <link nonce="dAnf0ss" rel="stylesheet" href="indexStyle.css">
+  <script nonce="dAnf0ss" src="Scripts/CountHandler.js"></script>
+   <link nonce="dAnf0ss" rel="stylesheet" href="fontawesome_6_4_2_min.css"> <!--For Robot icon-->
 </head>
 <body onload="countvisit()">
 
@@ -73,13 +74,38 @@
             <tr>
                 <td>CFO</td>
                 <td>CFO & MIS</td>
-                <td><a href="#" target="_blank">click to view</a></td>
+                <td><a href="CFO.html" target="_blank">click to view</a></td>
             </tr>      
             <tr>
                 <td>Chief Financial Officer</td>
                 <td>CFO & MIS</td>
-                <td><a href="#" target="_blank">click to view</a></td>
-            </tr>           
+                <td><a href="CFO.html" target="_blank">click to view</a></td>
+            </tr>
+            <tr>
+                <td>Daily Sales Flash</td>
+                <td>CFO & MIS</td>
+                <td><a href="https://app.powerbi.com/groups/b97b5de4-9560-4787-bd4d-43f7b3607405/reports/c7c58a09-640f-4921-b039-e781ad92235d?experience=power-bi" target="_blank">click to view</a></td>
+            </tr>
+            <tr>
+                <td>OVC Report</td>
+                <td>CFO & MIS</td>
+                <td><a href="https://app.powerbi.com/groups/b97b5de4-9560-4787-bd4d-43f7b3607405/reports/116cae58-6d35-4444-9c00-4979d80f1a95/bfd8011463e7089651d9?experience=power-bi" target="_blank">click to view</a></td>
+            </tr>
+            <tr>
+                <td>Other Variable Cost Report</td>
+                <td>CFO & MIS</td>
+                <td><a href="https://app.powerbi.com/groups/b97b5de4-9560-4787-bd4d-43f7b3607405/reports/116cae58-6d35-4444-9c00-4979d80f1a95/bfd8011463e7089651d9?experience=power-bi" target="_blank">click to view</a></td>
+            </tr>
+            <tr>
+                <td>FE Report</td>
+                <td>CFO & MIS</td>
+                <td><a href="https://app.powerbi.com/groups/b97b5de4-9560-4787-bd4d-43f7b3607405/reports/3a765086-1a53-4e72-b411-42b89d916bd5/ReportSection?experience=power-bi" target="_blank">click to view</a></td>
+            </tr>
+            <tr>
+                <td>Fixed Expenses Report</td>
+                <td>CFO & MIS</td>
+                <td><a href="https://app.powerbi.com/groups/b97b5de4-9560-4787-bd4d-43f7b3607405/reports/3a765086-1a53-4e72-b411-42b89d916bd5/ReportSection?experience=power-bi" target="_blank">click to view</a></td>
+            </tr>
         </table>
     </div>
     <div class="row" id="noresult">
@@ -114,7 +140,7 @@
                
                 <div class="row" style="height:200px">
                     <div class="container buttonwelcome col-xs-3 col-sm-3 col-md-3 col-lg-3">
-                        <a href="#" style="text-decoration:none">
+                        <a href="CFO.html" style="text-decoration:none">
                             <div class="row text-center" style="height:70px">
                                 <p style="margin-top:21px;color:rgb(51, 51, 51)"><strong>CFO Reporting & MIS</strong></p>
                             </div>
@@ -303,72 +329,8 @@
   </div>
 
 
-<script>
-    var items=document.querySelectorAll("#list li"),
-        tab = [], index;
-    //add values to tha array
-    for(var i=0;i<items.length;i++){
-        tab.push(items[i].innerHTML);
-    }
-    
-    //get selected element index
-    for(var i=0;i < items.length;i++){
-        items[i].onclick=function(){
-
-            index=tab.indexOf(this.innerHTML);
-            //console.log(this.innerHTML+"Index ="+index);
-            
-            if(index==0){
-                document.getElementById('country_text').innerHTML = "<span class='fa fa-globe'></span>"+" India "+"<span class='caret'></span>";                                            
-            }
-            else if(index==1){
-                location.replace("SouthKorea.html");
-                //document.getElementById('country_text').innerHTML = "<span class='fa fa-globe'></span>"+" South Korea "+"<span class='caret'></span>";               
-            }
-            else if(index==2){
-                location.replace("Malaysia.html");
-                //document.getElementById('country_text').innerHTML = "<span class='fa fa-globe'></span>"+" Malaysia "+"<span class='caret'></span>"; 
-            }
-            else if(index==3){
-                location.replace("Thailand.html");
-                //document.getElementById('country_text').innerHTML = "<span class='fa fa-globe'></span>"+" Thailand "+"<span class='caret'></span>"; 
-            }
-            else if(index==4){
-                location.replace("Singapore.html");
-                //document.getElementById('country_text').innerHTML = "<span class='fa fa-globe'></span>"+" Singapore "+"<span class='caret'></span>";  
-            }
-            else if(index==5){
-                location.replace("Taiwan.html");
-                //document.getElementById('country_text').innerHTML = "<span class='fa fa-globe'></span>"+" Taiwan "+"<span class='caret'></span>"; 
-            }
-            else if(index==6){
-                location.replace("Australia.html");
-                //document.getElementById('country_text').innerHTML = "<span class='fa fa-globe'></span>"+" Australia "+"<span class='caret'></span>";  
-            }
-            else if(index==7){
-                location.replace("NewZealand.html");
-                //document.getElementById('country_text').innerHTML = "<span class='fa fa-globe'></span>"+" New Zealand "+"<span class='caret'></span>";  
-            }
-            else if(index==8){
-                location.replace("Vietnam.html");
-                //document.getElementById('country_text').innerHTML = "<span class='fa fa-globe'></span>"+" Vietnam "+"<span class='caret'></span>";  
-            }
-            else if(index==9){ 
-                location.replace("Philippines.html");               
-                //document.getElementById('country_text').innerHTML = "<span class='fa fa-globe'></span>"+" Philippines "+"<span class='caret'></span>";  
-            }   
-            else if(index==10){
-                location.replace("Indonesia.html");
-                //document.getElementById('country_text').innerHTML = "<span class='fa fa-globe'></span>"+" Indonesia "+"<span class='caret'></span>";  
-            }          
-        }
-    }
-
-    
-</script>
-
-<script>
-    const searchFun = () => {        
+<script nonce="dAnf0ss">
+    $("#myInput").keyup(function(searchFun){        
         
         var notfound=0;
         let filter=document.getElementById('myInput').value.toUpperCase();
@@ -420,42 +382,17 @@
             document.getElementById("myTable").style.display="";
         }
           
-    }
+    });
 </script> 
 
-<script>
+<script nonce="dAnf0ss">
+    $(document).ready(
     function countvisit(){
         var PageCount = 1;        
-        var PageName = "India Home";
+        var PageName = "Home";
         sendCount(PageCount,PageName);
-    }
-</script>
-<!--
-<script>
-    $(function() {  
-  $("#chat-circle").click(function() {    
-    $("#chat-circle").toggle('scale');
-    $(".chat-box").toggle('scale');
-    $("#searchplatform").css("opacity","0.2");
-    $("#dashboardplatform").css("opacity","0.2");
-  })
-  
-  $(".fa-times").click(function() {
-    $("#chat-circle").toggle('scale');
-    $(".chat-box").toggle('scale');
-    $("#searchplatform").css("opacity","1");
-    $("#dashboardplatform").css("opacity","1");
-  })  
-})
+    });
 </script>
 
-<script>
-    const text=document.querySelector('.text p');
-    text.innerHTML = text.innerText.split("").map(
-    (char,i) =>
-        `<span style="transform:rotate(${i*35}deg)">${char}</span>`
-    ).join("")
-</script>
--->
 </body>
 </html>
